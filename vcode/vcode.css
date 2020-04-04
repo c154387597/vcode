@@ -23,22 +23,40 @@
 }
 .vcode-slide-faceboder {
   position: relative;
-  margin: 40px auto;
+  margin: 25px auto;
   width: 90px;
-  height: 60px;
+  height: 90px;
   overflow: hidden;
-  border: 5px solid #000;
   border-radius: 25px;
   background: #fff;
 }
 .vcode-slide-img {
   position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background:#4b96ea;
+}
+.vcode-slide-img::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url('./image/ware.svg') no-repeat center / 100% 100%;
+}
+.vcode-slide-img-finish {
+  position: absolute;
   top: 50%;
-  left: 15px;
-  margin-top: -22.5px;
-  width: 627px;
-  height: 45px;
-  background: url('./image/vcode-slide.png') no-repeat left / 100% 100%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  width: 60px;
+  height: 60px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTg1OTg0MTc1OTczIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQ0OTQiIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTQ2OS4zMzMzMzMgNjQwbDAuMzg0IDAuMzg0TDQ2OS4zMzMzMzMgNjQweiBtLTEwNi4yODI2NjYgMGwtMC4zODQgMC4zODQgMC4zODQtMC4zODR6IG00OC41MTIgMTA2LjY2NjY2N2E4Ny40NjY2NjcgODcuNDY2NjY3IDAgMCAxLTYxLjY1MzMzNC0yNC44NzQ2NjdsLTE3OS41Mi0xNzMuNjMyYTY3Ljc5NzMzMyA2Ny43OTczMzMgMCAwIDEgMC05OC4yNGMyOC4wMzItMjcuMTU3MzMzIDczLjQ5MzMzMy0yNy4xNTczMzMgMTAxLjU4OTMzNCAwbDEzOS41ODQgMTM0Ljk5NzMzMyAzMTkuMTY4LTMwOC41NDRjMjguMDMyLTI3LjE1NzMzMyA3My40OTMzMzMtMjcuMTU3MzMzIDEwMS41ODkzMzMgMGE2Ny45MjUzMzMgNjcuOTI1MzMzIDAgMCAxIDAgOTguMjRMNDcyLjk4MTMzMyA3MjIuMDY5MzMzQTg3LjUzMDY2NyA4Ny41MzA2NjcgMCAwIDEgNDExLjU2MjY2NyA3NDYuNjY2NjY3eiIgZmlsbD0iI2ZmZmZmZiIgcC1pZD0iNDQ5NSI+PC9wYXRoPjwvc3ZnPg==);
+  z-index: 1;
 }
 
 .vcode-slide-container {

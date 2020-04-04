@@ -130,7 +130,7 @@
           , slide = document.createElement('div');
         slide.className = 'vcode',
         slide.innerHTML = '<p class="title">' + this.lang.title + '</p>'+
-          '<div class="vcode-slide-faceboder"><div id="vcode-slide-img' + this.num + '" class="vcode-slide-img"></div></div>'+
+          '<div class="vcode-slide-faceboder"><div id="vcode-slide-img-finish' + this.num + '"></div><div id="vcode-slide-img' + this.num + '" class="vcode-slide-img"></div></div>'+
           '<div class="vcode-slide-container">'+
             '<div id="vcode-slide-bottom' + this.num + '" class="vcode-slide-bottom">'+
               '<div id="vcode-slide-cover' + this.num + '" class="vcode-slide-cover"><p id="vcode-slide-cover-p' + this.num + '"></p></div>' +
@@ -149,6 +149,7 @@
         var t = this
           , vcode = document.getElementById('vcode-body' + t.num)
           , slideImg = document.getElementById('vcode-slide-img' + t.num)
+          , slideImgFinish = document.getElementById('vcode-slide-img-finish' + t.num)
           , slideBtm = document.getElementById('vcode-slide-bottom' + t.num)
           , slideBtmP = document.getElementById('vcode-slide-bottom-p' + t.num)
           , slideBtn = document.getElementById('vcode-slide-button' + t.num)
@@ -158,6 +159,7 @@
           , moveX = slideBtm.offsetWidth - slideBtnWidth
           , successCallback = function () {
             addClass(slideCoverP, 'vcode-transition'),
+            addClass(slideImgFinish, 'vcode-slide-img-finish')
             slideCoverP.innerHTML = t.lang.verifySuccess,
             slideCoverP.style.top = 0,
             t.obj.success(),
@@ -176,10 +178,7 @@
             slideBtn.style.webkitTransform = 'translateX(0)',
             slideBtn.style.MozTransform = 'translateX(0)',
             slideBtn.style.OTransform = 'translateX(0)',
-            slideImg.style.msTransform = 'translateX(0)',
-            slideImg.style.webkitTransform = 'translateX(0)',
-            slideImg.style.MozTransform = 'translateX(0)',
-            slideImg.style.OTransform = 'translateX(0)',
+            slideImg.style.height = '0',
             slideBtmP.style.transform = 'translateX(0)',
             slideCover.style.width = slideBtnWidth + 'px',
             setTimeout(function () {
@@ -208,10 +207,7 @@
             slideBtn.style.webkitTransform = 'translateX(' + o + 'px)',
             slideBtn.style.MozTransform = 'translateX(' + o + 'px)',
             slideBtn.style.OTransform = 'translateX(' + o + 'px)',
-            slideImg.style.msTransform = 'translateX(-' + 90 * c + '%)',
-            slideImg.style.webkitTransform = 'translateX(-' + 90 * c + '%)',
-            slideImg.style.MozTransform = 'translateX(-' + 90 * c + '%)',
-            slideImg.style.OTransform = 'translateX(-' + 90 * c + '%)',
+            slideImg.style.height =  (95 * c) + '%',
             slideBtmP.style.transform = 'translateX(' + 10 * c + '%)',
             slideCover.style.width = (slideBtnWidth + o) + 'px',
             n.stopPropagation()
